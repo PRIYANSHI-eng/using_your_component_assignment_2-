@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  color: #fff;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Social Media Feed Title */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Post Card Styling */
+.post-card {
+  background: #ffffff;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px auto;
+  width: 320px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.post-card:hover {
+  transform: scale(1.05);
 }
 
-.card {
-  padding: 2em;
+/* Profile Section */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.post-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #ff5e62;
+}
+
+.post-header strong {
+  font-size: 1.2rem;
+  color: #ff5e62;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Like Button */
+.like-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.like-button.unliked {
+  background: gray;
+  color: white;
+}
+
+.like-button.liked {
+  background: red;
+  color: white;
+}
+
+.like-button:hover {
+  opacity: 0.8;
 }
